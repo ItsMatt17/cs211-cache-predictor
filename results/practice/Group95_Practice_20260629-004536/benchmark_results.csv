@@ -1,2 +1,0 @@
-group,mode,run_id,benchmark_run,time_minutes,num_addresses,loops_completed,addresses_tested,predictions_submitted,correct_predictions,incorrect_predictions,accuracy,coverage,prediction_score,memory_bytes,energy,predictor_runtime,overall_score
-Group95,Practice,Group95_Practice_20260629-004536,,1.00,1024,1169,1197056,1196032,335964,860068,28.09,99.91,42.45,9568256,5398259.20,14.549465,26.64
