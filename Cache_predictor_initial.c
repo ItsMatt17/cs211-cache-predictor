@@ -22,20 +22,24 @@ int main(int argc, char **argv) {
   if (in == NULL) {
     return EXIT_FAILURE;
   }
-
-  Entry table[MAX_ADDRESS] = {0};
+  int arr[ADDRESSES] = {0};
   int idx = 0;
   int curr;
   while (fscanf(in, "%x", &curr) == 1) {
-    // Place within hashtable to track freq
+    arr[idx++] = curr;
+  }
+  
+  Entry table[MAX_ADDRESS] = {0};
+  for(int i = 0; i < idx; i++){ 
+      curr = arr[i];
       table[curr].freq += 1;
-      table[curr].tag = curr;
-      idx++;
+      table[curr].tag = arr[i];
   }
 
   fclose(in);
   in = NULL;
 
+  // Sort based on frequency
   for(int i = 0; i < idx; i++){ 
     int max_idx = 0;
     for(int j = i + 1; j < ADDRESSES; j++){ 
